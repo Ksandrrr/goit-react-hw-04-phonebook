@@ -58,7 +58,7 @@ const App = () => {
   const delateContacts = id => {
     const updatedContacts = contacts.filter(contact => contact.id !== id);
     setContacts(updatedContacts);
-  };
+  };  
 
   const items = filterContacts();
   return (
@@ -72,4 +72,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default  App;
