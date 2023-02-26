@@ -1,4 +1,4 @@
-import Style from '../Phonebook.module.css';
+import Style from '../Component.module.css';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 const ContactForm = ({ onAddContacts }) => {
