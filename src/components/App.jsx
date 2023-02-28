@@ -3,7 +3,7 @@ import { nanoid } from 'nanoid';
 import ContactForm from './PhonebookForm/PhonebookForm';
 import PhoneList from './PhoneList/PhoneList';
 import PhoneBookFilter from './PhonebookFilter/PhonebookFilter';
-import { getInitialValue } from './Shared/LocalStorage/LocalStorage';
+import { getInitialValue } from './LocalStorage/LocalStorage';
 const App = () => {
   const [contacts, setContacts] = useState(() =>
     getInitialValue('my-contacts', [
@@ -13,6 +13,7 @@ const App = () => {
       { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
     ])
   );
+  console.log(contacts)
   const [filter, setFilter] = useState('');
 
   const firstRender = useRef(true);
@@ -22,6 +23,7 @@ const App = () => {
       return;
     }
     localStorage.setItem('my-contacts', JSON.stringify(contacts));
+
   }, [contacts]);
 
   const onAddContacts = ({ name, number }) => {

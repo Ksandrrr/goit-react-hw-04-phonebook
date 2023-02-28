@@ -1,6 +1,7 @@
 import Style from '../Component.module.css';
 import PropTypes from 'prop-types';
-const PhoneList = ({ items, delateContacts }) => {
+const PhoneList = ( {items, delateContacts} ) => {
+  console.log(items)
   const elements = items.map(({id, name, number  }) => (
     <li key={id} className={Style.list}>
       {name} ({number})
