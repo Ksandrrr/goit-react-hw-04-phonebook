@@ -7,7 +7,15 @@ const ContactForm = ({ onAddContacts }) => {
 
   const handleNameChange = ({ target }) => {
     const { name, value } = target;
-    name === 'name' ? setName(value) : setNumber(value);
+    // name === 'name' ? setName(value) : setNumber(value);
+    switch (name) {
+      case 'name':
+        setName(value)
+        break;
+      default:
+      setNumber(value)
+        break;
+    }
   };
   const handleSubmit = event => {
     event.preventDefault();
